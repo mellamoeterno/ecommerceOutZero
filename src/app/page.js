@@ -12,7 +12,7 @@ export default function Home() {
 
       {/* Pepper Image */}
       <Image
-        src="/pepper.png" // replace with your actual pepper image path
+        src="/pepper.png" 
         alt="Spicy Pepper"
         width={200}
         height={200}
