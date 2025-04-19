@@ -22,19 +22,19 @@ export default function Home() {
 
       {/* Features Section */}
       <div className="grid sm:grid-cols-2 gap-6 text-white text-center max-w-3xl">
-        <div className="p-4 bg-white/20 rounded-xl backdrop-blur">
+        <div className="p-4 bg-black/20 rounded-xl backdrop-blur">
           <h2 className="text-2xl font-bold mb-2">🌶️ Fresh Ingredients</h2>
-          <p>Only the ripest, spiciest peppers make the cut.</p>
+          <p>Only the best sauce make the cut.</p>
         </div>
-        <div className="p-4 bg-white/20 rounded-xl backdrop-blur">
+        <div className="p-4 bg-black/20 rounded-xl backdrop-blur">
           <h2 className="text-2xl font-bold mb-2">🔥 Hot Deals</h2>
           <p>Grab exclusive offers before they cool down!</p>
         </div>
-        <div className="p-4 bg-white/20 rounded-xl backdrop-blur">
+        <div className="p-4 bg-black/20 rounded-xl backdrop-blur">
           <h2 className="text-2xl font-bold mb-2">🍽️ Recipes</h2>
-          <p>Spice up your meals with our fiery recipe collection.</p>
+          <p>Spice up your meals with our fiery mustard recipe collection.</p>
         </div>
-        <div className="p-4 bg-white/20 rounded-xl backdrop-blur">
+        <div className="p-4 bg-black/20 rounded-xl backdrop-blur">
           <h2 className="text-2xl font-bold mb-2">📦 Fast Shipping</h2>
           <p>Get your peppery goodness delivered fresh to your door.</p>
         </div>
