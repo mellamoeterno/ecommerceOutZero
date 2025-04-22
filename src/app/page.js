@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
 
       {/* Pepper Image */}
       <Image
-        src="/pepper.png" 
+        src="/black-pepper-sauce-recipe.jpg"
         alt="Spicy Pepper"
         width={200}
         height={200}
@@ -40,13 +41,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Call-to-Action */}
-      <a
-        href="#"
-        className="mt-8 px-6 py-3 bg-white text-red-700 font-bold rounded-full shadow-lg hover:bg-red-100 transition"
-      >
-        Shop Now
-      </a>
+      {/* Call-to-Action */}    
+      <Link href="/products" className="group relative inline-block text-sm font-medium text-indigo-100 focus:ring-3 focus:outline-hidden"      
+    >
+      <span
+        className="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-amber-500 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"
+      ></span>
+    
+      <span className="relative block border border-current bg-amber-500 px-8 py-3"> view our products </span>
+    </Link>        
     </div>
   );
 }
