@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function Products() {
-
+//remember to only push simpler code
   const products = [
     {
       id: 1,
