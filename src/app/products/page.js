@@ -25,31 +25,31 @@ export default function Products() {
     }
   ];
 
-  
+  //fix names not showing!!!!!
   const carouselProducts = [
     {
       id: 1,
-      name: 'Special Product 1',
-      image: '', /*gonnacheck the image thing*/
-      price: '$12.00'
+      name: 'Mexican cheese pepper sauce',
+      image: '/image/imageProduct2/product1', 
+      price: '$6.00'
     },
     {
       id: 2,
-      name: 'Special Product 2',
-      image: '/image/carousel2.jpg',
-      price: '$18.00'
+      name: 'Tomato mango pepper sauce',
+      image: '/image/imageProduct2/product2',
+      price: '$8.00'
     },
     {
       id: 3,
-      name: 'Special Product 3',
-      image: '/image/carousel3.jpg',
-      price: '$22.00'
+      name: 'Honey and almond pepper sauce',
+      image: '/image/imageProduct2/product3',
+      price: '$8.00'
     },
     {
       id: 4,
-      name: 'Special Product 4',
-      image: '/image/carousel4.jpg',
-      price: '$25.00'
+      name: 'Vietnamese pepper dip sauce',
+      image: '/image/imageProduct2/product4',
+      price: '$6.00'
     }
   ];
 
@@ -62,6 +62,7 @@ export default function Products() {
       setCurrentSlide(prev => (prev + 1) % (carouselProducts.length - 1));
     }, 3000);
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -100,7 +101,7 @@ export default function Products() {
 
         {/* Carousel section */}
         <div className="mt-32">
-          <h2 className="text-3xl font-bold text-center mb-12">Also Check This</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Also Check This</h2>{/*fix images not showing!!!!!*/}
           
           <div className="relative max-w-4xl mx-auto overflow-hidden">
             <div className="flex transition-transform duration-500 ease-in-out"
@@ -142,4 +143,3 @@ export default function Products() {
   );
 }
 
-/*objective: create simpler code and see if works*/
