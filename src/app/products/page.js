@@ -6,7 +6,7 @@ export default function Products() {
   const products = Array.from({ length: 3 }, (_, i) => ({
     id: i + 1,
     name: `Sauce mango omega ${i + 1}`,
-    image: `/image/product${i + 1}`, 
+    image: `/image/product${i + 1}.jpg`, 
     price: `$${(i + 1) * 5}.00`
   }));
 
