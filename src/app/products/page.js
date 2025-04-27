@@ -3,9 +3,12 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function Products() {
-//remember to push only advanced code to new advanced code branch
-  const products = [
-    {
+  //product component
+  const [cart, setCart] = useState([]);
+
+//remember to push only (stripe try1) advanced code to new advanced code branch
+  const products = 
+  [{
       id: 1,
       name: 'Sauce mango omega',
       image: '/image/product1.jpg',
@@ -22,9 +25,8 @@ export default function Products() {
       name: 'Our special Sauce with almond',
       image: '/image/product3.jpg',
       price: '$5.70'
-    }
-  ];
-
+    }];
+ 
   //fix names not showing!!!!!
   const carouselProducts = [
     {
