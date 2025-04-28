@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { loadStripe } from '@stripe/stripe-js';
 
 export default function Products() {
   //product component
@@ -26,6 +27,11 @@ export default function Products() {
       image: '/image/product3.jpg',
       price: '$5.70'
     }];
+    //add to cart component
+  const addToCart = (products) => {
+    setCart([...cart, products]);
+    alert(`${products.name} added to cart!`);
+  };
  
   //fix names not showing!!!!!
   const carouselProducts = [
@@ -55,6 +61,7 @@ export default function Products() {
     }
   ];
 
+
   // Carousel state
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -79,21 +86,21 @@ export default function Products() {
 
         {/* Products grid - horizontal layout */}
         <div className="flex flex-wrap justify-center gap-8 mb-32">
-          {products.map(product => (
-            <div key={product.id} className="w-64 bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105">
+          {products.map(products => (
+            <div key={products.id} className="w-64 bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105">
               <div className="h-48 relative">
                 <Image
-                  src={product.image}
-                  alt={product.name}
+                  src={products.image}
+                  alt={products.name}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="product-image"
                 />
               </div>
               <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-                <p className="text-gray-600 mb-4">{product.price}</p>
-                <button className="w-full bg-gradient-to-r from-red-500 to-yellow-500 text-white py-2 rounded hover:opacity-90 transition">
+                <h2 className="text-xl font-semibold mb-2">{products.name}</h2>
+                <p className="text-gray-600 mb-4">{products.price}</p>
+                <button className="w-full bg-gradient-to-r from-red-500 to-yellow-500 text-white py-2 rounded hover:opacity-90 transition" onClick={() => addToCart(products)}>
                   View Product
                 </button>
               </div>
@@ -108,20 +115,20 @@ export default function Products() {
           <div className="relative max-w-4xl mx-auto overflow-hidden">
             <div className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 50}%)` }}>
-              {[...carouselProducts, ...carouselProducts].map((product, index) => (
-                <div key={`${product.id}-${index}`} className="w-1/2 px-4 min-w-[50%]">
+              {[...carouselProducts, ...carouselProducts].map((products, index) => (
+                <div key={`${products.id}-${index}`} className="w-1/2 px-4 min-w-[50%]">
                   <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                     <div className="h-48 relative">
                       <Image
-                        src={product.image}
-                        alt={product.name}
+                        src={products.image}
+                        alt={products.name}
                         fill
                         style={{ objectFit: 'cover' }}
                       />
                     </div>
                     <div className="p-4">
-                      <h3 className="text-lg font-semibold">{product.name}</h3>
-                      <p className="text-gray-600">{product.price}</p>
+                      <h3 className="text-lg font-semibold">{products.name}</h3>
+                      <p className="text-gray-600">{products.price}</p>
                     </div>
                   </div>
                 </div>
