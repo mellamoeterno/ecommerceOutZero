@@ -33,7 +33,10 @@ export default function Products() {
     alert(`${products.name} added to cart!`);
   };
  
+
   
+  //the carousel dont need in this file an addToCart function,
+  //only in its 'check also these' page
   const carouselProducts = [
     {
       id: 1,
