@@ -11,7 +11,7 @@ export default function Products() {
   const products = 
   [{
       id: 1,
-      name: 'Sauce mango omega',
+      name: 'Sauce mango omega special',
       image: '/image/product1.jpg',
       price: '$5.00'
     },
@@ -33,30 +33,31 @@ export default function Products() {
     alert(`${products.name} added to cart!`);
   };
  
-  //fix names not showing!!!!!
+  
   const carouselProducts = [
     {
       id: 1,
       name: 'Mexican cheese pepper sauce',
-      image: '/image/imageProduct2/product1', 
+      image: '/imageProduct2/product1.jpg', 
       price: '$6.00'
     },
     {
       id: 2,
       name: 'Tomato mango pepper sauce',
-      image: '/image/imageProduct2/product2',
+      image: '/imageProduct2/product2.jpg',
       price: '$8.00'
     },
+    //fix bad image quality product3
     {
       id: 3,
       name: 'Honey and almond pepper sauce',
-      image: '/image/imageProduct2/product3',
+      image: '/imageProduct2/product3.jpg',
       price: '$8.00'
     },
     {
       id: 4,
       name: 'Vietnamese pepper dip sauce',
-      image: '/image/imageProduct2/product4',
+      image: '/imageProduct2/product4.jpg',
       price: '$6.00'
     }
   ];
@@ -98,7 +99,12 @@ export default function Products() {
                 />
               </div>
               <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2">{products.name}</h2>
+                <h2 className={`text-xl font-semibold mb-2 ${
+                products.id === 1 ? 'text-red-950' :
+                products.id === 2 ? 'text-red-950' :
+                products.id === 3 ? 'text-red-950' : ''
+                }`}>
+                {products.name}</h2>
                 <p className="text-gray-600 mb-4">{products.price}</p>
                 <button className="w-full bg-gradient-to-r from-red-500 to-yellow-500 text-white py-2 rounded hover:opacity-90 transition" onClick={() => addToCart(products)}>
                   View Product
@@ -108,9 +114,9 @@ export default function Products() {
           ))}
         </div>
 
-        {/* Carousel section */}
+        {/* finish color text style later */}
         <div className="mt-32">
-          <h2 className="text-3xl font-bold text-center mb-12">Also Check This</h2>{/*fix images not showing!!!!!*/}
+          <h2 className="text-3xl font-bold text-center mb-12">Also Check This</h2>
           
           <div className="relative max-w-4xl mx-auto overflow-hidden">
             <div className="flex transition-transform duration-500 ease-in-out"
@@ -127,7 +133,14 @@ export default function Products() {
                       />
                     </div>
                     <div className="p-4">
-                      <h3 className="text-lg font-semibold">{products.name}</h3>
+                        <h3 className={`text-lg font-semibold ${
+                          products.id === 1 ? 'text-red-500' :
+                          products.id === 2 ? 'text-orange-500' :
+                          products.id === 3 ? 'text-amber-500' :
+                          products.id === 4 ? 'text-lime-600' : ''
+                          }`}>
+                          {products.name}
+                        </h3>
                       <p className="text-gray-600">{products.price}</p>
                     </div>
                   </div>
