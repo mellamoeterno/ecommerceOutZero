@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-//remember to push only advanced (stripe try1) code to new advanced code branch
+//stripe checkout cart On debugging now, for mergin later on advancedCodeStripeTry1 branch later
 export default function Products2() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-red-600 via-yellow-400 to-green-600 font-sans p-8 gap-10">

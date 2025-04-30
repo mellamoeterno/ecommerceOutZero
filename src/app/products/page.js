@@ -7,7 +7,7 @@ export default function Products() {
   //product component
   const [cart, setCart] = useState([]);
 
-//remember to push only (stripe try1) advanced code to new advanced code branch
+//stripe checkout cart On debugging now, for mergin later on advancedCodeStripeTry1 branch later
   const products = 
   [{
       id: 1,
